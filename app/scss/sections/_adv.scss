@@ -1,0 +1,117 @@
+.adv {
+    padding: 120px 0;
+
+    @media (max-width: $tablet) {
+        padding: 60px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__inner {
+        width: 40%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        &:first-child {
+            .adv__item {
+                justify-content: end;
+
+                @media (max-width: $tablet) {
+                    justify-content: center;
+                }
+
+                &:nth-child(2) {
+                    padding-right: 40px;
+
+                    @media (max-width: $tablet) {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .adv__text {
+                text-align: right;
+            }
+
+            .adv__ico {
+                margin-left: 20px;
+            }
+        }
+
+        &:last-child {
+            .adv__item {
+                justify-content: start;
+
+                @media (max-width: $tablet) {
+                    justify-content: center;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 40px;
+
+                    @media (max-width: $tablet) {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .adv__text {
+                @media (max-width: $tablet) {
+                   text-align: right;
+                }
+            }
+
+            .adv__ico {
+                order: -1;
+                margin-right: 20px;
+
+                @media (max-width: $tablet) {
+                    order: 1;
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__ico {
+        position: relative;
+        max-width: 92px;
+        min-width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        border: 2px solid $active;
+        text-align: center;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            height: 36px;
+            width: 36px;
+        }
+    }
+
+    &__text {
+        font-size: 30px;
+        line-height: 120%;
+        color: $active;
+    }
+}
