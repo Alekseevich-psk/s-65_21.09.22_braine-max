@@ -1,0 +1,10 @@
+@import 'normilize/reset';
+
+@import "mixin/fonts";
+@import "fonts";
+
+@import "./setting/variables";
+@import "./setting/main";
+
+@import "./elements/header";
+@import "./elements/footer";

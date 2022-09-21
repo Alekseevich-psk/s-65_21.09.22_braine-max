@@ -1,0 +1,32 @@
+html,body {
+    font-family: "robotoCondensed", arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1240px;
+    padding: 0 10px;
+    margin: 0 auto;
+    font-size: 16px;
+    position: relative;
+
+    @media (max-width: $ds) {
+        width: $tablet;
+    }
+
+    @media (max-width: $tablet) {
+        width: $mobile;
+    }
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        padding: 0 14px;
+    }
+}
