@@ -1,6 +1,6 @@
 .main {
     padding-top: 160px;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     @media(max-width: $tablet) {
         padding-top: 100px;
@@ -19,10 +19,6 @@
     &__inner {
         width: 50%;
 
-        @media(max-width: $tablet) {
-            width: 100%;
-        }
-
         &:last-child {
             img {
                 width: 100%;
@@ -30,6 +26,14 @@
                 object-fit: contain;
                 object-position: right;
             }
+
+            @media(max-width: $tablet) {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: $mobile) {
+            width: 100%;
         }
     }
 
