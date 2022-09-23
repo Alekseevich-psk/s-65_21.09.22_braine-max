@@ -38,6 +38,10 @@
                         padding-right: 0;
                     }
                 }
+
+                @media(max-width: $mobile) {
+                    width: 330px;
+                }
             }
 
             .adv__text {
@@ -77,6 +81,10 @@
                     width: 360px;
                     margin-left: auto;
                     margin-right: auto;
+                }
+
+                @media(max-width: $mobile) {
+                    width: 330px;
                 }
 
                 &:nth-child(2) {
@@ -157,5 +165,9 @@
         font-size: 30px;
         line-height: 120%;
         color: $active;
+
+        @media(max-width: $mobile) {
+            font-size: 26px;
+        }
     }
 }
