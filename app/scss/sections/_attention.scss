@@ -1,0 +1,23 @@
+.attention {
+    padding: 90px 0 60px;
+
+    @media (max-width: $tablet) {
+        padding: 40px 0 30px ;
+    }
+
+    &__text {
+        font-size: 40px;
+        line-height: 100%;
+        text-align: center;
+        color: #B1DDF6;
+        font-family: "bebasNeue", Arial, Helvetica, sans-serif;
+
+        @media (max-width: $ds) {
+            font-size: 32px;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: 26px;
+        }
+    }
+}
