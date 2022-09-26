@@ -20,6 +20,7 @@ let path = {
         html: source_flr + "/html/*.html",
         css: source_flr + "/scss/style.scss",
         js: source_flr + "/scripts/**/*.js",
+        libs: source_flr + "/libs/**/*.js",
         video: source_flr + "/video/*.{mp4,webm,ogv,swf}",
         img: source_flr + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_flr + "/fonts/*.{otf,ttf,woff2,woff}",
@@ -138,15 +139,8 @@ function js() {
 }
 
 function libs() {
-    return src(jsFiles)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(concat('libs.js'))
-        .pipe(uglify())
-        .pipe(rename('libs.min.js'))
-        .pipe(sourcemaps.write(''))
-        .pipe(gulp.dest(path.build.libs))
-        .pipe(browsersync.stream())
+    return src(path.src.libs)
+        .pipe(dest(path.build.libs))
 }
 
 function fonts2woff() {
