@@ -8,13 +8,13 @@ let fs = require('fs');
 let path = {
     build: {
         html: project_flr + "/",
-        css: project_flr + "/assets/template/css/",
-        js: project_flr + "/assets/template/js/",
-        img: project_flr + "/assets/template/images/",
-        fonts: project_flr + "/assets/template/fonts/",
-        libs: project_flr + "/assets/template/libs/",
-        video: project_flr + "/assets/template/video/",
-        svg: project_flr + "/assets/template/images/svg/",
+        css: project_flr + "/css/",
+        js: project_flr + "/js/",
+        img: project_flr + "/images/",
+        fonts: project_flr + "/fonts/",
+        libs: project_flr + "/libs/",
+        video: project_flr + "/video/",
+        svg: project_flr + "/images/svg/",
     },
     src: {
         html: source_flr + "/html/*.html",
