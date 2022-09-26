@@ -150,6 +150,12 @@
         border: 2px solid $active;
         text-align: center;
 
+        @media(max-width: $mobile) {
+            height: 64px;
+            max-width: 64px;
+            min-width: 64px;
+        }
+
         img {
             position: absolute;
             top: 50%;
@@ -158,6 +164,11 @@
             display: inline-block;
             height: 36px;
             width: 36px;
+
+            @media(max-width: $mobile) {
+                height: 28px;
+                width: 28px;
+            }
         }
     }
 
