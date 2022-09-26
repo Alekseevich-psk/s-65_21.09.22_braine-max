@@ -1,4 +1,5 @@
 .adv {
+    position: relative;
     padding: 120px 0;
 
     @media (max-width: $tablet) {
@@ -12,6 +13,10 @@
         @media (max-width: $tablet) {
             flex-direction: column;
         }
+    }
+
+    &__particles {
+
     }
 
     &__inner {
