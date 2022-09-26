@@ -64,7 +64,7 @@ let { src, dest } = require("gulp"),
 
 
 const jsFiles = [
-    'node_modules/swiper/swiper-bundle.js',
+    'node_modules/particlesjs/dist/particles.min.js',
 ];
 
 function browserSync() {
