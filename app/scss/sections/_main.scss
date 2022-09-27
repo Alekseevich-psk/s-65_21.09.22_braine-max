@@ -1,8 +1,11 @@
 .main {
     padding-top: 160px;
-    // min-height: 100vh;
 
-    @media(max-width: $tablet) {
+    @media (min-height: 620px) and (min-width: $tablet) {
+        min-height: 92vh;
+    }
+
+    @media (max-width: $tablet) {
         padding-top: 100px;
     }
 
@@ -11,7 +14,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             flex-direction: column;
         }
     }
@@ -27,12 +30,12 @@
                 object-position: right;
             }
 
-            @media(max-width: $tablet) {
+            @media (max-width: $tablet) {
                 width: 100%;
             }
         }
 
-        @media(max-width: $mobile) {
+        @media (max-width: $mobile) {
             width: 100%;
         }
     }
@@ -44,9 +47,9 @@
     }
 
     &__ico {
-        max-width: 64px;
-        min-width: 64px;
-        height: 64px;
+        max-width: 68px;
+        min-width: 68px;
+        height: 68px;
         display: inline-block;
 
         img {
@@ -56,7 +59,7 @@
             object-fit: contain;
         }
 
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             max-width: 48px;
             min-width: 48px;
             height: 48px;
@@ -67,10 +70,11 @@
         display: inline-block;
         vertical-align: middle;
         margin-left: 22px;
-        font-size: 30px;
+        font-size: 34px;
+        line-height: 110%;
         color: $white;
 
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             font-size: 24px;
             line-height: 130%;
         }

@@ -645,6 +645,12 @@ html, body {
   padding-top: 160px;
 }
 
+@media (min-height: 620px) and (min-width: 960px) {
+  .main {
+    min-height: 92vh;
+  }
+}
+
 @media (max-width: 960px) {
   .main {
     padding-top: 100px;
@@ -695,9 +701,9 @@ html, body {
 }
 
 .main__ico {
-  max-width: 64px;
-  min-width: 64px;
-  height: 64px;
+  max-width: 68px;
+  min-width: 68px;
+  height: 68px;
   display: inline-block;
 }
 
@@ -722,7 +728,8 @@ html, body {
   display: inline-block;
   vertical-align: middle;
   margin-left: 22px;
-  font-size: 30px;
+  font-size: 34px;
+  line-height: 110%;
   color: #fff;
 }
 
