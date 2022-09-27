@@ -1,3 +1,4 @@
+@import 'node_modules/swiper/swiper-bundle';
 @import 'normilize/reset';
 
 @import "mixin/fonts";
@@ -20,5 +21,6 @@
 @import "./sections/adv";
 @import "./sections/prof";
 @import "./sections/work";
+@import "./sections/articles";
 @import "./sections/use";
 @import "./sections/attention";

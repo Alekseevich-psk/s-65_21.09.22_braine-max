@@ -148,26 +148,31 @@ particlesJS("particles-js", {
   },
   retina_detect: true
 });
+"use strict";
 
-var count_particles, stats, _update;
+console.log('log');
 
-stats = new Stats();
-stats.setMode(0);
-stats.domElement.style.position = "absolute";
-stats.domElement.style.left = "0px";
-stats.domElement.style.top = "0px";
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector(".js-count-particles");
-
-_update = function update() {
-  stats.begin();
-  stats.end();
-
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  }
-
-  requestAnimationFrame(_update);
-};
-
-requestAnimationFrame(_update);
+(function () {
+  var parent = document.querySelector(".swiper-container");
+  if (!parent) return;
+  new Swiper(parent, {
+    // navigation: {
+    //     nextEl: ".clients .sl-arrows__arrow--next",
+    //     prevEl: ".clients .sl-arrows__arrow--prev",
+    // },
+    breakpoints: {
+      320: {
+        spaceBetween: 28,
+        slidesPerView: 1
+      },
+      728: {
+        spaceBetween: 30,
+        slidesPerView: 2
+      },
+      960: {
+        spaceBetween: 32,
+        slidesPerView: 3
+      }
+    }
+  });
+})();
