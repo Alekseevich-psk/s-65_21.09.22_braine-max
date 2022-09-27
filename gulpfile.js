@@ -65,7 +65,8 @@ let { src, dest } = require("gulp"),
 
 
 const jsFiles = [
-    'node_modules/particlesjs/dist/particles.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/particlesjs/dist/particles.min.js'
 ];
 
 function browserSync() {
@@ -139,8 +140,13 @@ function js() {
 }
 
 function libs() {
-    return src(path.src.libs)
-        .pipe(dest(path.build.libs))
+    return src(jsFiles)
+        .pipe(plumber())
+        .pipe(concat('libs.js'))
+        .pipe(uglify())
+        .pipe(rename('libs.min.js'))
+        .pipe(gulp.dest(path.build.libs))
+        .pipe(browsersync.stream())
 }
 
 function fonts2woff() {
