@@ -1104,6 +1104,10 @@ body.doc .footer {
   font-size: 12px;
 }
 
+.footer__inner:last-child {
+  display: none;
+}
+
 .footer__inner:last-child .footer__item {
   margin-left: 20px;
   display: inline-block;

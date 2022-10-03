@@ -37,6 +37,7 @@
         }
 
         &:last-child {
+            display: none;
            
             .footer__item {
                 margin-left: 20px;
