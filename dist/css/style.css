@@ -1340,12 +1340,12 @@ body.doc .footer {
 .particles {
   z-index: 1;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   width: 90%;
   height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media (max-width: 960px) {
@@ -1602,41 +1602,158 @@ body.doc .footer {
 
 .adv {
   position: relative;
-  padding: 120px 0 160px;
-}
-
-.adv .container {
-  position: relative;
-  z-index: 2;
+  padding: 120px 0;
 }
 
 @media (max-width: 960px) {
   .adv {
-    padding: 60px 0 20px;
+    padding: 60px 0;
   }
 }
 
 .adv__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.adv__item {
-  margin: 2%;
-  width: 27%;
-  min-width: 330px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  z-index: 2;
 }
 
 @media (max-width: 960px) {
-  .adv__item {
-    margin-bottom: 26px;
+  .adv__wrapper {
+    flex-direction: column;
   }
+}
+
+.adv__inner {
+  width: 40%;
+}
+
+@media (max-width: 960px) {
+  .adv__inner {
+    width: 100%;
+  }
+}
+
+.adv__inner:first-child .adv__item {
+  justify-content: end;
+}
+
+@media (max-width: 960px) {
+  .adv__inner:first-child .adv__item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+  }
+}
+
+.adv__inner:first-child .adv__item:nth-child(2) {
+  padding-right: 40px;
+}
+
+@media (max-width: 960px) {
+  .adv__inner:first-child .adv__item:nth-child(2) {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .adv__inner:first-child .adv__item {
+    width: 330px;
+  }
+}
+
+.adv__inner:first-child .adv__text {
+  text-align: right;
+}
+
+.adv__inner:first-child .adv__ico {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .adv__inner:first-child .adv__item:nth-child(2n) {
+    justify-content: start;
+  }
+  .adv__inner:first-child .adv__item:nth-child(2n) .adv__text {
+    text-align: left;
+  }
+  .adv__inner:first-child .adv__item:nth-child(2n) .adv__ico {
+    margin-right: 20px;
+    margin-left: 0;
+    order: -1;
+  }
+}
+
+.adv__inner:last-child .adv__item {
+  justify-content: start;
+}
+
+@media (max-width: 960px) {
+  .adv__inner:last-child .adv__item {
+    justify-content: end;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .adv__inner:last-child .adv__item {
+    width: 330px;
+  }
+}
+
+.adv__inner:last-child .adv__item:nth-child(2) {
+  padding-left: 40px;
+}
+
+@media (max-width: 960px) {
+  .adv__inner:last-child .adv__item:nth-child(2) {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .adv__inner:last-child .adv__text {
+    text-align: right;
+  }
+}
+
+.adv__inner:last-child .adv__ico {
+  order: -1;
+  margin-right: 20px;
+}
+
+@media (max-width: 960px) {
+  .adv__inner:last-child .adv__ico {
+    order: 1;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adv__inner:last-child .adv__item:nth-child(2n + 1) {
+    justify-content: start;
+  }
+  .adv__inner:last-child .adv__item:nth-child(2n + 1) .adv__text {
+    text-align: left;
+  }
+  .adv__inner:last-child .adv__item:nth-child(2n + 1) .adv__ico {
+    margin-right: 20px;
+    margin-left: 0;
+    order: -1;
+  }
+}
+
+.adv__item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.adv__item:hover .adv__text {
+  text-decoration: underline;
 }
 
 .adv__item:hover .adv__ico {
@@ -1652,15 +1769,14 @@ body.doc .footer {
   border-radius: 50%;
   border: 2px solid #2347A5;
   text-align: center;
-  margin-left: 20px;
   transition: 0.3s;
 }
 
 @media (max-width: 768px) {
   .adv__ico {
-    height: 72px;
-    max-width: 72px;
-    min-width: 72px;
+    height: 64px;
+    max-width: 64px;
+    min-width: 64px;
   }
 }
 
@@ -1683,14 +1799,9 @@ body.doc .footer {
 }
 
 .adv__text {
-  font-size: 26px;
+  font-size: 30px;
   line-height: 120%;
   color: #2347A5;
-  width: 220px;
-}
-
-.adv__text:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

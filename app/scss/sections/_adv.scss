@@ -1,37 +1,153 @@
 .adv {
     position: relative;
-    padding: 120px 0 160px;
-
-    .container {
-        position: relative;
-        z-index: 2;
-    }
+    padding: 120px 0;
 
     @media (max-width: $tablet) {
-        padding: 60px 0 20px;
+        padding: 60px 0;
     }
 
     &__wrapper {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__inner {
+        width: 40%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        &:first-child {
+            .adv__item {
+                justify-content: end;
+
+                @media (max-width: $tablet) {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 360px;
+                }
+
+                &:nth-child(2) {
+                    padding-right: 40px;
+
+                    @media (max-width: $tablet) {
+                        padding-right: 0;
+                    }
+                }
+
+                @media(max-width: $mobile) {
+                    width: 330px;
+                }
+            }
+
+            .adv__text {
+                text-align: right;
+            }
+
+            .adv__ico {
+                margin-left: 20px;
+            }
+
+
+            @media (max-width: $mobile) {
+                .adv__item {
+                    &:nth-child(2n) {
+                        justify-content: start;
+    
+                        .adv__text {
+                            text-align: left;
+                        }
+    
+                        .adv__ico {
+                            margin-right: 20px;
+                            margin-left: 0;
+                            order: -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            .adv__item {
+                justify-content: start;
+
+                @media (max-width: $tablet) {
+                    justify-content: end;
+                    width: 360px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @media(max-width: $mobile) {
+                    width: 330px;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 40px;
+
+                    @media (max-width: $tablet) {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .adv__text {
+                @media (max-width: $tablet) {
+                   text-align: right;
+                }
+            }
+
+            .adv__ico {
+                order: -1;
+                margin-right: 20px;
+
+                @media (max-width: $tablet) {
+                    order: 1;
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                .adv__item {
+                    &:nth-child(2n + 1) {
+                        justify-content: start;
+    
+                        .adv__text {
+                            text-align: left;
+                        }
+    
+                        .adv__ico {
+                            margin-right: 20px;
+                            margin-left: 0;
+                            order: -1;
+                        }
+                    }
+                }
+            }
+        }
+
+ 
     }
 
     &__item {
-        margin: 2%;
-        width: 27%;
-        min-width: 330px;
+        position: relative;
+        z-index: 2;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
-        z-index: 2;
-
-        @media(max-width: $tablet) {
-            margin-bottom: 26px;
-        }
 
         &:hover {
+            .adv__text {
+                text-decoration: underline;
+            }
+
             .adv__ico {
                 transform: rotate(360deg);
             }
@@ -46,13 +162,12 @@
         border-radius: 50%;
         border: 2px solid $active;
         text-align: center;
-        margin-left: 20px;
         transition: $transition;
 
-        @media (max-width: $mobile) {
-            height: 72px;
-            max-width: 72px;
-            min-width: 72px;
+        @media(max-width: $mobile) {
+            height: 64px;
+            max-width: 64px;
+            min-width: 64px;
         }
 
         img {
@@ -64,7 +179,7 @@
             height: 36px;
             width: 36px;
 
-            @media (max-width: $mobile) {
+            @media(max-width: $mobile) {
                 height: 28px;
                 width: 28px;
             }
@@ -72,16 +187,11 @@
     }
 
     &__text {
-        font-size: 26px;
+        font-size: 30px;
         line-height: 120%;
         color: $active;
-        width: 220px;
 
-        &:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: $mobile) {
+        @media(max-width: $mobile) {
             font-size: 26px;
         }
     }
