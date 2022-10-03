@@ -6,10 +6,10 @@ console.log('log');
     if (!parent) return;
 
     new Swiper(parent, {
-        // navigation: {
-        //     nextEl: ".clients .sl-arrows__arrow--next",
-        //     prevEl: ".clients .sl-arrows__arrow--prev",
-        // },
+        navigation: {
+            nextEl: ".articles .sl-arrows__arrow--next",
+            prevEl: ".articles .sl-arrows__arrow--prev",
+        },
         breakpoints: {
             320: {
                 spaceBetween: 28,
