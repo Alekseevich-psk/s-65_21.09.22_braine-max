@@ -1706,28 +1706,40 @@ html, body {
 
 .work__item--three {
   background-color: red;
-  width: 100%;
-  z-index: 1;
+  width: 55%;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/bg-sl-3.png");
 }
 
 .work__item--two {
   background-color: blue;
-  width: 55%;
+  width: 50%;
   z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url("../images/bg-sl-2.png");
 }
 
 .work__item--two:hover {
-  width: 90%;
+  width: 80%;
 }
 
 .work__item--one {
   background-color: #00ff0d;
   width: 25%;
   z-index: 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url("../images/bg-sl-1.png");
 }
 
 .work__item--one:hover {
-  width: 80%;
+  width: 70%;
 }
 
 .work__item--one:hover ~ .work__item--two {
