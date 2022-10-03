@@ -1,8 +1,5 @@
-console.log('log');
 (function () {
     const parent = document.querySelector(".swiper-container");
-    
-
     if (!parent) return;
 
     new Swiper(parent, {

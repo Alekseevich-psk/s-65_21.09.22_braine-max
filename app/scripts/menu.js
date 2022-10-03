@@ -11,4 +11,4 @@
         header.classList.toggle('bg');
     })
 
-}())
+})();

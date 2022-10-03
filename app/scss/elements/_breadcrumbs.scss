@@ -1,0 +1,94 @@
+.breadcrumbs {
+    padding: 8px 0 !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    li {
+        list-style-type: none !important;
+
+        &:before {
+            display: none;
+        }
+
+        &:first-child {
+            &:before {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding-left: 0 !important;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        padding-right: 30px;
+
+        a {
+            color: $active;
+            text-decoration: none !important;
+        }
+
+        &:first-child {
+            padding-left: 26px;
+
+            &:before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 2px;
+                left: 0;
+                background-color: $active;
+                mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' fill='none' viewBox='0 0 36 36'%3e%3cpath fill='%2304122D' d='m33.275 17.754-14.48-14.47a1.122 1.122 0 0 0-1.59 0l-14.48 14.47c-.422.422-.661.995-.661 1.592a2.252 2.252 0 0 0 2.25 2.25h1.525v10.326c0 .622.503 1.125 1.125 1.125h8.786v-7.875h3.938v7.875h9.348c.622 0 1.124-.503 1.124-1.125V21.596h1.526a2.252 2.252 0 0 0 1.59-3.843Z'/%3e%3c/svg%3e ");
+                mask-size: 100% 100%;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            top: -2px;
+            right: 12px;
+            font-size: 16px;
+            opacity: 0.2;
+            font-weight: 700;
+            content: "/";
+        }
+
+        &:last-child {
+            opacity: 0.5;
+
+            a {
+                &:hover {
+                    color: $active;
+                }
+            }
+
+            .breadcrambs__link {
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:after {
+                display: none;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: #000e29;
+        transition: 0.14s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}
