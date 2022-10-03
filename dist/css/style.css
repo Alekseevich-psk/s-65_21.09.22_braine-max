@@ -1711,7 +1711,14 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../images/bg-sl-3.png");
+  background-image: url("../images/bg-sl-3.jpg");
+}
+
+@media (max-width: 960px) {
+  .work__item--three {
+    background-position: center;
+    background-image: url("../images/bg-sl-3-m.jpg");
+  }
 }
 
 .work__item--two {
@@ -1721,7 +1728,14 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("../images/bg-sl-2.png");
+  background-image: url("../images/bg-sl-2.jpg");
+}
+
+@media (max-width: 960px) {
+  .work__item--two {
+    background-position: center;
+    background-image: url("../images/bg-sl-2-m.jpg");
+  }
 }
 
 .work__item--two:hover {
@@ -1735,7 +1749,14 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("../images/bg-sl-1.png");
+  background-image: url("../images/bg-sl-1.jpg");
+}
+
+@media (max-width: 960px) {
+  .work__item--one {
+    background-position: center;
+    background-image: url("../images/bg-sl-1-m.jpg");
+  }
 }
 
 .work__item--one:hover {

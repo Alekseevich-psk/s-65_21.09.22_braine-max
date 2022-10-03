@@ -88,7 +88,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url('../images/bg-sl-3.png');
+            background-image: url('../images/bg-sl-3.jpg');
+
+            @media(max-width: $tablet) {
+                background-position: center;
+                background-image: url('../images/bg-sl-3-m.jpg');
+            }
         }
 
         &--two {
@@ -98,7 +103,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: left;
-            background-image: url('../images/bg-sl-2.png');
+            background-image: url('../images/bg-sl-2.jpg');
+
+            @media(max-width: $tablet) {
+                background-position: center;
+                background-image: url('../images/bg-sl-2-m.jpg');
+            }
 
             &:hover {
                 width: 80%;
@@ -112,7 +122,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: left;
-            background-image: url('../images/bg-sl-1.png');
+            background-image: url('../images/bg-sl-1.jpg');
+
+            @media(max-width: $tablet) {
+                background-position: center;
+                background-image: url('../images/bg-sl-1-m.jpg');
+            }
 
             &:hover {
                 width: 70%;
