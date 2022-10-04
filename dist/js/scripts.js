@@ -1,6 +1,18 @@
 "use strict";
 
 (function () {
+  var parent = document.querySelector('.adv');
+  if (!parent) return;
+  var arrItem = parent.querySelectorAll('.adv__item');
+  arrItem.forEach(function (el, i) {
+    setTimeout(function () {
+      el.classList.add('animate-glow');
+    }, 350 * i);
+  });
+})();
+"use strict";
+
+(function () {
   var parent = document.querySelector(".document");
   if (!parent) return;
   var body = document.querySelector("body");
