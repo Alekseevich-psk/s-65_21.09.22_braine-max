@@ -1,6 +1,8 @@
 .document {
 
     background: linear-gradient(180deg,#2347a5 0,rgba(251,240,248,0) 100%);
+    background-size: 100% 50vh;
+    background-repeat: no-repeat;
 
     &__articles {
         padding-bottom: 20px !important;
@@ -20,6 +22,7 @@
     &__title {
         padding-bottom: 20px;
         line-height: 125% !important;
+        color: $white;
     }
 
     &__preview {
