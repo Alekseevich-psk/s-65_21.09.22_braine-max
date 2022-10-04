@@ -2235,6 +2235,44 @@ body.doc .footer {
   }
 }
 
+.document__title {
+  padding-bottom: 20px;
+  line-height: 125% !important;
+}
+
+.document__preview {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+@media (max-width: 960px) {
+  .document__preview {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .document__preview {
+    height: 240px;
+  }
+}
+
+.document__preview img {
+  border-radius: 8px;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .document__wrapper {
   display: flex;
   justify-content: space-between;
