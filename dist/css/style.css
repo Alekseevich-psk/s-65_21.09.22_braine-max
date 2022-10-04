@@ -1420,6 +1420,7 @@ body.doc .footer {
 
 .breadcrumbs li {
   list-style-type: none !important;
+  padding-bottom: 0 !important;
 }
 
 .breadcrumbs li:before {
