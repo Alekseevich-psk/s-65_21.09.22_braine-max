@@ -3,7 +3,7 @@
 (function () {
   var parent = document.querySelector('.adv');
   if (!parent) return;
-  var arrItem = parent.querySelectorAll('.adv__item');
+  var arrItem = parent.querySelectorAll('.adv__ico');
   arrItem.forEach(function (el, i) {
     setTimeout(function () {
       el.classList.add('animate-glow');

@@ -3,7 +3,7 @@
     const parent = document.querySelector('.adv');
     if(!parent) return;
 
-    const arrItem = parent.querySelectorAll('.adv__item');
+    const arrItem = parent.querySelectorAll('.adv__ico');
 
     arrItem.forEach((el, i) => {
         setTimeout(() => {
