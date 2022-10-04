@@ -2221,6 +2221,10 @@ body.doc .footer {
   }
 }
 
+.document {
+  background: linear-gradient(180deg, #2347a5 0, rgba(251, 240, 248, 0) 100%);
+}
+
 .document__articles {
   padding-bottom: 20px !important;
 }
@@ -2524,4 +2528,8 @@ body.doc .footer {
   max-width: 660px;
   margin: 20px auto;
   display: inline-block;
+}
+
+.not-found {
+  background: linear-gradient(180deg, #2347a5 0, rgba(251, 240, 248, 0) 100%);
 }
