@@ -204,8 +204,9 @@
   parent.addEventListener("click", function (event) {
     var target = event.target;
     var noClose = popupBodyInner.querySelector('.popup__inner');
+    var isPopupNeeded = noClose.id != 'popup-hi' && target.classList.contains("popup__overlay") || noClose.id != 'popup-hi' && target.classList.contains("popup__close");
 
-    if (noClose.id != 'popup-hi' && target.classList.contains("popup__overlay") || noClose.id != 'popup-hi' && target.classList.contains("popup__close")) {
+    if (isPopupNeeded) {
       startPopup(parent);
       popupBodyInner.innerHTML = "";
     }

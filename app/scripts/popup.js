@@ -9,7 +9,7 @@
         btnsOpen.forEach((el) => {
             if (el) {
                 el.addEventListener("click", (event) => {
-                    let elemForInnerPopup = document.getElementById(el.getAttribute("data-popup-id"));
+                    const elemForInnerPopup = document.getElementById(el.getAttribute("data-popup-id"));
 
                     if (elemForInnerPopup) {
                         startPopup(parent);
@@ -25,10 +25,12 @@
     }
 
     parent.addEventListener("click", (event) => {
-        let target = event.target;
+        const target = event.target;
         const noClose = popupBodyInner.querySelector('.popup__inner');
+        
+        const isPopupNeeded = noClose.id != 'popup-hi' && target.classList.contains("popup__overlay") || noClose.id != 'popup-hi' && target.classList.contains("popup__close");
 
-        if(noClose.id != 'popup-hi' && target.classList.contains("popup__overlay") || noClose.id != 'popup-hi' && target.classList.contains("popup__close")) {
+        if(isPopupNeeded) {
             startPopup(parent);
             popupBodyInner.innerHTML = "";
         }
