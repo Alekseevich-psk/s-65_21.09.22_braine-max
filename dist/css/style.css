@@ -1417,6 +1417,12 @@ body.doc .footer {
   }
 }
 
+@media (max-width: 768px) {
+  .sl-arrows {
+    top: 95px;
+  }
+}
+
 .sl-arrows__arrow {
   background-color: #fff;
   cursor: pointer;

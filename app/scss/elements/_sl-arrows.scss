@@ -18,6 +18,10 @@
         }
     }
 
+    @media(max-width: $mobile) {
+        top: 95px;
+    }
+
     &__arrow {
         background-color: #fff;
         cursor: pointer;
