@@ -13,7 +13,9 @@
 
                     if (elemForInnerPopup) {
                         startPopup(parent);
-                        popupBodyInner.appendChild(elemForInnerPopup.cloneNode(true));
+                        const cloneNode = elemForInnerPopup.cloneNode(true);
+                        popupBodyInner.appendChild(cloneNode);
+                        updatePixel(cloneNode);
                     } else {
                         console.error("Елемент не найден! Проверьте data-popup-id елемента");
                     }
@@ -46,6 +48,20 @@
         }
 
     });
+
+    function updatePixel(el) {
+        if (!el) return;
+
+        const metrics = el.querySelectorAll(".metric_link");
+        if (!metrics.length) return;
+
+        metrics.forEach((element) => {
+            element.addEventListener("click", function () {
+                let pixel = new Image(1, 1).src = this.getAttribute("data-metric");
+                if(pixel != null) console.log(pixel);
+            });
+        });
+    }
 
     (function firstStart() {
         if(!localStorage.show == 1) {

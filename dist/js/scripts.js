@@ -58,6 +58,20 @@
 })();
 "use strict";
 
+// Метрика
+(function () {
+  var parent = document.querySelectorAll('.metric_link');
+  if (!parent.length) return;
+  parent.forEach(function (el) {
+    el.addEventListener('click', function () {
+      var link = el.dataset.metric;
+      console.log(link);
+      new Image(1, 1).src = link;
+    });
+  });
+})();
+"use strict";
+
 (function () {
   var parent = document.querySelector('.particles');
   if (!parent) return;
@@ -188,7 +202,9 @@
 
           if (elemForInnerPopup) {
             startPopup(parent);
-            popupBodyInner.appendChild(elemForInnerPopup.cloneNode(true));
+            var cloneNode = elemForInnerPopup.cloneNode(true);
+            popupBodyInner.appendChild(cloneNode);
+            updatePixel(cloneNode);
           } else {
             console.error("Елемент не найден! Проверьте data-popup-id елемента");
           }
@@ -221,6 +237,18 @@
       document.querySelector('body').innerHTML = '';
     }
   });
+
+  function updatePixel(el) {
+    if (!el) return;
+    var metrics = el.querySelectorAll(".metric_link");
+    if (!metrics.length) return;
+    metrics.forEach(function (element) {
+      element.addEventListener("click", function () {
+        var pixel = new Image(1, 1).src = this.getAttribute("data-metric");
+        if (pixel != null) console.log(pixel);
+      });
+    });
+  }
 
   (function firstStart() {
     if (!localStorage.show == 1) {
