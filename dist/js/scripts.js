@@ -244,8 +244,9 @@
     if (!metrics.length) return;
     metrics.forEach(function (element) {
       element.addEventListener("click", function () {
+        if (!this.getAttribute("data-metric")) return;
         var pixel = new Image(1, 1).src = this.getAttribute("data-metric");
-        if (pixel != null) console.log(pixel);
+        console.log(pixel);
       });
     });
   }
